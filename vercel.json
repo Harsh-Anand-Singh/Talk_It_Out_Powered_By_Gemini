@@ -3,8 +3,14 @@
   "name": "talk-it-out",
   "builds": [
     {
-      "src": "index.js", // Replace with your entry point file if you have one
-      "use": "@vercel/static-build"
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
